@@ -15,23 +15,36 @@
 # specific language governing permissions and limitations
 # under the License.
 """ HHB Command Line Tools """
+
+# argparse是python用于解析命令行参数和选项的标准模块，用于代替已经过时的optparse模块。argparse模块的作用是用于解析命令行参数。
 import argparse
+
+# logging 是python用于记录日志的标准模块
 import logging
+
+# sys是python用于python解释器相关的变量和方法，这点于os模块不同
 import sys
+
+# os是python用于为os模块提供了多数操作系统的功能接口函数
 import os
 
+# 可以选择用sys.path.insert(0,‘/path’),这样新添加的目录会优先于其他目录被import检查, sys.path.append(),则是放在列表尾部。注意：sys.path是个列表
+# os.path.dirname((__file__)是得到当前文件的绝对路径
+# https://blog.csdn.net/weixin_38470851/article/details/80367143
+# 这句话的本意就是使得该文件所在目录优先于其他sys被找到
 sys.path.insert(0, os.path.dirname(__file__))
 
+# 导入./core文件夹中的各种库。
 from core.arguments_manage import ArgumentManage, CommandType, HHBException, ArgumentFilter
 from core.arguments_manage import update_arguments_by_file
 from core.common import ALL_ARGUMENTS_INFO, import_module_for_register, collect_arguments_info
 from core.common import ArgInfo, ALL_ARGUMENTS_DESC
 
-
+# 在内部字典中将lvl与名字levelName联系在一起，用以将数字型级别映射为文本型表示。例如 Formatter格式化一条信息。这个函数也可以用于自定义级别。
 LOG = 25
 logging.addLevelName(LOG, "LOG")
 
-
+# _main函数，argv
 def _main(argv):
     """ HHB commmand line interface. """
     arg_manage = ArgumentManage(argv)
@@ -82,7 +95,7 @@ def _main(argv):
 
 
 def main():
-    ALL_MODULES_FOR_REGISTER = [
+    ALL_MODULES_FOR_REGISTER = [   
         "importer",
         "quantizer",
         "codegen",

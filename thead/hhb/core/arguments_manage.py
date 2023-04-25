@@ -804,6 +804,7 @@ class ArgumentManage(object):
             res = True
         return res
 
+    # 这是一个叫做返回值注解的符号。它通过允许将元数据附加到描述其参数和返回值的函数来扩展该功能。
     def get_command_type(self) -> CommandType:
         """Determine the type of command line parameters
 
