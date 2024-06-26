@@ -59,7 +59,7 @@ sys.path.insert(0, str(tvm_path.resolve() / "docs"))
 
 # General information about the project.
 project = "HHB"
-author = "T-Head Semiconductor Co."
+author = "C-SKY Microsystems Co., Ltd."
 copyright = "2020 - 2023, %s" % author
 github_doc_root = "https://github.com/zhangwm-pt/tvm/tree/main/docs/"
 

@@ -18,7 +18,7 @@
 HHB (Heterogeneous Honey Badger)
 ==============================================
 
-HHB is a is a collection of tools for deploying neural network models. It is provided by T-Head for the Wujian SoC platform.
+HHB is a is a collection of tools for deploying neural network models. It is provided by XuanTie for the Wujian SoC platform.
 
 Website
 ---------------

@@ -79,7 +79,7 @@ def get_package_data_files():
 setup(
     name="hhb",
     version=__version__,
-    description="HHB: T-Head deployment tools for Deep Learning Systems",
+    description="HHB: XuanTie deployment tools for Deep Learning Systems",
     zip_safe=False,
     entry_points={"console_scripts": ["hhb = hhb.main:main"]},
     install_requires=[

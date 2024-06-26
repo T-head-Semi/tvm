@@ -710,7 +710,7 @@ class HardwareArguments(ArgumentsBase):
             name="--matrix-extension-mlen",
             default=0,
             type=int,
-            help="Specify T-head Matrix extension's MLEN bit, default is 0, unuse matrix extension.",
+            help="Specify XuanTie Matrix extension's MLEN bit, default is 0, unuse matrix extension.",
         )
 
     @property
